@@ -1,0 +1,8 @@
+node_modules/
+.env*
+!.env.example
+.vercel/
+dist/
+test-results/
+assets-live.json
+actions-live.json
