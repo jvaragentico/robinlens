@@ -1,0 +1,3 @@
+import fs from 'node:fs';
+const path='temporary-host/lib/providers.mjs';let source=fs.readFileSync(path,'utf8');source=source.replace("import {id} from 'ethers';","const selectors={'decimals()':'0x313ce567','uiMultiplier()':'0xa60bf13d','oraclePaused()':'0x7706ba52'}; // Derived with ethers id() and verified by the live RPC smoke test.");source=source.replace("id(signature).slice(0,10)","selectors[signature]");fs.writeFileSync(path,source);
+const layout='temporary-host/app/layout.tsx';source=fs.readFileSync(layout,'utf8').replace('Starter Project','RWA Lens Preview').replace('A clean starting point for building your site.','Read-only Robinhood Chain portfolio analytics.').replace(/  other: \{[\s\S]*?\},\n/,'');fs.writeFileSync(layout,source);

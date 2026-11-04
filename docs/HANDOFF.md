@@ -1,5 +1,13 @@
 # Handoff — 5 November 2026
 
+## Temporary hosting (completed after Vercel access failure)
+
+Private review deployment succeeded through Sites: https://robinlens-preview.jvar-agentic.chatgpt.site . Native deployment ID `appgdep_6aeb99367c9c8191afd716992c47b251` returned `succeeded`. This is a Sites deployment, not Vercel. Access is owner-private.
+
+The temporary Worker edition embeds the existing UI and domain/provider/API modules, using independently derived read-only function selectors. Local Worker smoke tests returned 200 for the page and JavaScript, and 400 for invalid wallet input; its artifact validator passed. The hosting service verified publication; authenticated browser checks and a funded live-wallet test on this private deployment remain unperformed. The source generator is `scripts/create-worker-host.mjs`. The full framework installation was slow, so a dependency-free Worker build was used instead.
+
+The Vercel blocker below remains applicable to the planned Vercel release only.
+
 ## Delivered
 
 Functional read-only portfolio dashboard with live issuer registry, block-pinned ERC-20 reads, verified multiplier comparison, indicative equity-midpoint valuation, pagination, identity matching, explicit partial-data states, isolated demo, accessible position dialog and responsive layouts. Token launch transparency page is implemented; economic terms await the founder.

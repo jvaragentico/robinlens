@@ -6,3 +6,6 @@ dist/
 test-results/
 assets-live.json
 actions-live.json
+temporary-host/
+temporary-worker-host/
+*.tar.gz
