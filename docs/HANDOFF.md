@@ -43,3 +43,5 @@ Published the dark animated dashboard, orbital visual, luminous controls, read-o
 14 unit/integration tests passed; desktop/mobile browser regressions passed. Additional browser assertions passed for ENS resolution feeding the portfolio scan, explorer block links, outage states and wallet calls restricted to eth_requestAccounts. Live vitalik.eth resolved to 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045. No live funded portfolio valuation has been claimed.
 
 Sites deployment appgdep_6aecd48131a08191ac7334c317349b07 returned succeeded at the existing private URL. The Vercel project-creation permission blocker remains unchanged. Vercel-ready and full-source ZIPs are provided separately, with docs/DEPLOYMENT-GUIDE.md for Vercel and VPS setup. No VPS was accessed or provisioned.
+
+Deployed verification completed with the Sites-scoped service token kept in memory: homepage, future.css, future.js, live activity and vitalik.eth ENS lookup returned 200; invalid ENS and wallet inputs returned 400. Authentication remained owner-private. Token values were not persisted in source or release archives.
