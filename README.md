@@ -25,3 +25,9 @@ Vercel builds static assets to `dist`, with `/api/portfolio` as a server-side fu
 Requests validate address, chain and scan cursor; API supports GET only. Per-instance rate limits and concurrency bounds are defensive, not a distributed abuse-control system. Logs emit provider-failure event/timestamp, not addresses, request bodies or endpoint credentials. Server-side caches are bounded and short-lived. Infrastructure access logs may record wallet query strings; configure retention/redaction at the host before a public launch. No wallet address is persisted in browser storage.
 
 Corporate-action history storage and external monitoring are integration gaps. Financial values are unavailable rather than invented when reads fail. REST quotes are indicative underlier midpoints, never executable token quotes. Tokenomics page is pending founder-provided terms.
+
+## Redesigned preview and portable releases
+
+The dark animated interface adds a live block feed and read-only ENS (.eth) lookup. Enter `vitalik.eth` or an EVM address. ENS is resolved on Ethereum mainnet; portfolio reads remain on Robinhood Chain 4663. Social usernames are not supported. PublicNode is the public ENS RPC fallback; set server-only `ETHEREUM_RPC_URL` for a dedicated endpoint. Offchain CCIP-read resolvers are disabled; unsupported names return an unavailable/error state.
+
+See [Vercel and VPS instructions](docs/DEPLOYMENT-GUIDE.md). `npm test` covers 14 unit/integration cases; `BASE_URL=http://127.0.0.1:3000 node tests/future-browser.mjs` verifies ENS-to-scan, explorer availability and read-only wallet methods. The live feed refreshes every 20 seconds while the page is visible.

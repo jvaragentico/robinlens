@@ -35,3 +35,11 @@ Founder must supply token name/ticker, network, supply, allocations, vesting/unl
 Before claiming production readiness: configure a dedicated RPC and distributed abuse controls; add persistent corporate-action provenance/correction/history storage and archival reconciliation; integrate authoritative market sessions and venue availability if these are to be shown as known; configure external operational monitoring; verify a funded wallet and all deployed primary flows. USD-only indicative quotes, unknown public-wallet eligibility, no P&L, no historical valuation and no direct redemption are explicit limitations. Calendar/DST tests verify conservative unknown states, not a holiday-calendar implementation.
 
 Setup and environment names: see README.md. Mechanics and source URLs: see SPECIFICATION.md. No secrets are included in the source or handoff.
+
+## Futuristic redesign release — 6 November 2026
+
+Published the dark animated dashboard, orbital visual, luminous controls, read-only EVM wallet flow, live Robinhood Chain block feed (20-second refresh while visible), and Ethereum ENS lookup (.eth). The feed is explicitly independent of the fictional demo portfolio. Failed refreshes retain last-observed blocks with an honest state. ENS resolution uses PublicNode or server-only ETHEREUM_RPC_URL; offchain CCIP-read resolvers are disabled.
+
+14 unit/integration tests passed; desktop/mobile browser regressions passed. Additional browser assertions passed for ENS resolution feeding the portfolio scan, explorer block links, outage states and wallet calls restricted to eth_requestAccounts. Live vitalik.eth resolved to 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045. No live funded portfolio valuation has been claimed.
+
+Sites deployment appgdep_6aecd48131a08191ac7334c317349b07 returned succeeded at the existing private URL. The Vercel project-creation permission blocker remains unchanged. Vercel-ready and full-source ZIPs are provided separately, with docs/DEPLOYMENT-GUIDE.md for Vercel and VPS setup. No VPS was accessed or provisioned.

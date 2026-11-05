@@ -9,3 +9,5 @@ actions-live.json
 temporary-host/
 temporary-worker-host/
 *.tar.gz
+
+releases/

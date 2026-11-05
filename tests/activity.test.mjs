@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {activity} from '../lib/activity.mjs';
+let wrong=false;globalThis.fetch=async(url,options)=>{const q=JSON.parse(options.body);const result=q.method==='eth_chainId'?(wrong?'0x1':'0x1237'):q.method==='eth_blockNumber'?'0x100':{number:q.params[0],hash:'0x'+'a'.repeat(64),timestamp:'0x65500000',transactions:['0x'+'b'.repeat(64)]};return new Response(JSON.stringify({result}));};
+test('explorer reports read-only block identity and transaction counts',async()=>{const r=await activity();assert.equal(r.blocks.length,4);assert.equal(r.blocks[0].number,'256');assert.equal(r.blocks[0].transactionCount,1);assert.equal(r.chainId,4663);});
+test('explorer rejects the wrong RPC chain',async()=>{wrong=true;await assert.rejects(activity(),/Unexpected chain/);wrong=false;});
